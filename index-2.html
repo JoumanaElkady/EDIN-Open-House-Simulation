@@ -1,0 +1,130 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>PULSE EGYPT: The Startup Challenge</title><style>*{box-sizing:border-box;margin:0}:root{--bg:#0a0f1e;--card:#131b33;--card2:#1a2447;--tx:#f2f5ff;--mu:#9aa6c9;--ac:#c6ff3d;--ac2:#3de0ff;--rd:#ff3d5a;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}body{background:var(--bg);color:var(--tx);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;transition:background .5s}
+body.crisis{background:radial-gradient(circle at 50% 0,#5a0a1a,#14050a 70%)}#app{max-width:520px;margin:0 auto;padding:16px 16px 48px}
+h1{font-size:clamp(2.2rem,11vw,3.4rem);line-height:1;font-weight:900;letter-spacing:-1px;margin:14px 0}h1 em{font-style:normal;color:var(--ac)}h2{font-size:1.6rem;line-height:1.15;margin:14px 0 8px;font-weight:800}h3{margin:22px 0 8px;font-size:.8rem;letter-spacing:2px;color:var(--ac2)}
+.h3{font-size:1rem;letter-spacing:.5px}.eyebrow,small{font-size:.7rem;letter-spacing:2px;color:var(--ac);font-weight:700;display:block}p{margin:8px 0}.muted{color:var(--mu)}.note{color:var(--ac2);font-size:.9rem}
+.top{display:flex;align-items:center;gap:10px;font-size:.72rem;font-weight:800;letter-spacing:1.5px;color:var(--ac);position:sticky;top:0;background:inherit;padding:10px 0;z-index:2}.prog{flex:1;height:5px;background:var(--card2);border-radius:9px;overflow:hidden}.prog i{display:block;height:100%;background:var(--ac);transition:width .5s}.cash{color:var(--tx)}
+.card{background:var(--card);border:2px solid transparent;border-radius:16px;padding:14px;margin:10px 0;animation:up .35s both}.opt{cursor:pointer;transition:.2s}.opt:active{transform:scale(.98)}.opt.sel{border-color:var(--ac);background:var(--card2);box-shadow:0 0 0 4px #c6ff3d22}
+.row{display:flex;justify-content:space-between;align-items:center;gap:10px}.sm{font-size:.85rem;color:var(--mu);margin-top:3px}.st{color:var(--ac);letter-spacing:1px}.st i{font-style:normal;color:#334}.pill{background:var(--card2);padding:3px 10px;border-radius:99px;font-size:.75rem;white-space:nowrap}
+.bar{height:8px;background:var(--card2);border-radius:9px;overflow:hidden;margin:8px 0}.bar span{display:block;height:100%;background:linear-gradient(90deg,var(--ac2),var(--ac));border-radius:9px;transition:width 1.2s}.grow{flex:1}
+.more{display:none}.more.on{display:block}.tap{color:var(--ac2);font-size:.85rem}.px b{color:var(--ac)}.seg{cursor:pointer}
+button{font:inherit;cursor:pointer;border:0}.cta{display:block;width:100%;margin:18px 0;padding:16px;border-radius:14px;background:var(--ac);color:#0a0f1e;font-weight:900;letter-spacing:1px;font-size:1rem}.cta:disabled{opacity:.3}.ghost,.link{background:none;color:var(--ac2);padding:8px 0;font-size:.9rem}.link{display:block;margin:6px auto;color:var(--mu)}
+input,textarea{width:100%;padding:14px;border-radius:12px;border:2px solid var(--card2);background:var(--card);color:var(--tx);font:inherit;margin:14px 0 0}.pm{width:48px;height:48px;border-radius:12px;background:var(--card2);color:var(--ac);font-size:1.6rem}.amt{text-align:center;font-weight:800}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}.fin{display:flex;justify-content:space-between;text-align:center;gap:8px}.fin b{font-size:.95rem}.big{font-size:1.2rem}.warn{color:var(--rd)}.good{color:var(--ac)}
+ul{padding-left:20px;margin:6px 0;color:var(--mu)}li{margin:3px 0}.alert{background:var(--rd);color:#fff;font-weight:900;font-size:1.3rem;text-align:center;padding:16px;border-radius:14px;margin:14px 0;animation:flash 1s infinite,shake .6s 2}
+.hero{text-align:left;opacity:0;transform:translateY(12px);transition:.6s}.hero.in{opacity:1;transform:none}.center{text-align:center;padding-top:25vh}.spin{width:56px;height:56px;border:5px solid var(--card2);border-top-color:var(--ac);border-radius:50%;margin:0 auto 20px;animation:sp 1s linear infinite}
+.emoji{font-size:4rem}.final{text-align:center;background:var(--card);border-radius:20px;padding:20px;margin:16px 0}.final b{font-size:4.2rem;color:var(--ac);font-weight:900}.final span{color:var(--mu)}.kpi{background:var(--card);border-radius:14px;padding:12px}.kpi b{font-size:1.15rem}
+.code{text-align:center}.code b{font-size:1.15rem;letter-spacing:1px;word-break:break-all;user-select:all}.win{text-align:center;border-color:var(--ac)}.win span{color:var(--ac);font-size:2rem;font-weight:900}
+.chips{display:flex;flex-wrap:wrap;gap:8px}.chips span{background:var(--card2);padding:6px 12px;border-radius:99px;font-size:.85rem}.quote{font-size:1.25rem;font-weight:800;margin:26px 0;color:var(--ac)}
+.modal{position:fixed;inset:0;background:#000c;overflow:auto;z-index:9;padding:16px}.sheet{max-width:520px;margin:0 auto}
+@keyframes up{from{opacity:0;transform:translateY(10px)}}@keyframes flash{50%{background:#a8001c}}@keyframes shake{25%{transform:translateX(-8px)}75%{transform:translateX(8px)}}@keyframes sp{to{transform:rotate(360deg)}}</style></head><body><div id="app"></div><script>//MODEL
+const SEG={T:{n:'Trend Seekers',lo:2800,hi:4000,mid:3400,aff:{s:1,u:.6,p:.2,m:.35},sf:{o:.85,p:.7,h:1},base:18000,loss:.2},
+V:{n:'Value Seekers',lo:1700,hi:2700,mid:2200,aff:{s:.5,u:1,p:.25,m:.5},sf:{o:.8,p:.85,h:1},base:24000,loss:.15},
+C:{n:'Conscious Consumers',lo:2500,hi:3500,mid:3000,aff:{s:.4,u:.35,p:1,m:.2},sf:{o:.7,p:.85,h:1},base:12000,loss:.1}};
+const PROD={core:{n:'PULSE CORE',c:900,f:{T:.35,V:1,C:.45}},drop:{n:'PULSE DROP',c:1500,f:{T:1,V:.3,C:.35}},earth:{n:'PULSE EARTH',c:1350,f:{T:.45,V:.55,C:1}}};
+const SALES={o:{n:'Online-first',set:150e3,fix:150e3,per:120,reach:1},p:{n:'Pop-up',set:300e3,fix:250e3,per:200,reach:.6},h:{n:'Hybrid',set:450e3,fix:400e3,per:260,reach:1.2}};
+const cl=(x,a=0,b=1)=>Math.max(a,Math.min(b,x));
+const pFit=(p,s)=>p<s.lo?1-.9*(s.lo-p)/s.lo:p>s.hi?cl(1-2.5*(p-s.hi)/s.hi):1;
+const dm=(p,s)=>p>s.hi?Math.max(.05,1-2.5*(p-s.hi)/s.hi):p<s.lo?1.2:1+.3*(s.mid-p)/s.mid;
+const enOf=(s,mk)=>{let e=0;for(const k in mk)e+=mk[k]/8*s.aff[k];if(Math.max(...Object.values(mk))>=5)e*=.9;return cl(e/.8)};
+function calc(d,gr){
+ const T=SEG[d.seg],S=SALES[d.sales],P=PROD[d.prod];const p0=d.price;let price=p0;if(d.crisis=='A')price=Math.round(p0*.85);const dmx=(s)=>d.crisis=='A'?.25*dm(p0,s)+.75*dm(price,s):dm(p0,s);const pavg=d.crisis=='A'?.25*p0+.75*price:p0;
+ const boost=d.crisis=='C'?.1:0;
+ const un=(k,w)=>{const s=SEG[k],pf=cl(P.f[k]+boost);return s.base*.11*w*(.35+.65*pf)*dmx(s)*(.4+.6*enOf(s,d.mk))*S.reach*(.6+.4*s.sf[d.sales])};
+ let U=0;for(const k in SEG)U+=un(k,k==d.seg?1:.12);
+ const pf=cl(P.f[d.seg]+boost),pr=pFit(p0,T),en=enOf(T,d.mk),sf=T.sf[d.sales];
+ const fitPre=.3*pf+.25*pr+.25*en+.2*sf;
+ const loss=T.loss,res={A:.25,B:.45,C:.5,D:fitPre>=.75?.4:1}[d.crisis]*loss;U*=1-res;
+ let spend=4e5+S.set+(d.crisis=='B'?2e5:0)+(d.crisis=='C'?2.5e5:0),gcost=0;
+ const fin=(U,sp)=>{const rev=U*pavg,net=rev-U*P.c-U*S.per-S.fix-sp,gm=(pavg-P.c-S.per)/pavg;
+  return{rev,net,gm,f:net<0?Math.max(0,20+net/5e4):100*(.6*cl(net/1.3e6)+.4*cl(gm/.5))}};
+ let r=fin(U,spend);
+ const healthy=(r.f/100*.6+fitPre*.4);
+ let gs=0;
+ if(gr){const g={range:healthy>.75?.9:healthy>.6?.6:.3,cities:healthy>.8&&d.sales!='p'?.9:healthy>.65?.55:.25,brand:healthy<.65?.9:healthy<.8?.75:.6}[gr];gs=g;
+  gcost={range:3e5,cities:35e4,brand:2e5}[gr];U*=1+({range:.12,cities:.14,brand:.05}[gr])*g;r=fin(U,spend+gcost);}
+ const cashPre=2e6+fin(U,spend+(gr?gcost:0)).net;
+ let comp=0,m=(price-P.c-S.per)/price;
+ if(d.crisis=='A')comp=({V:.85,T:.35,C:.4}[d.seg])-(m<.18?.25:0);
+ if(d.crisis=='B')comp=({T:.85,V:.65,C:.6}[d.seg])*(.6+.4*en);
+ if(d.crisis=='C')comp=({C:.85,T:.75,V:.55}[d.seg])-(pf>=1?.15:0);
+ if(d.crisis=='D')comp=fitPre>=.75?.85:.25;
+ if(cashPre<2.5e5)comp*=.7;comp=cl(comp);
+ let brand=100*(.4*en+.3*pf+.3*pr)+({A:d.seg=='V'?2:-8,B:4,C:5,D:0}[d.crisis])+(gr=='brand'?5:0);brand=cl(brand,0,100);
+ const fit=100*fitPre,finS=r.f,cs=[pf,pr,en,sf,comp,gs||.5];
+ const cons=100*(.5*cs.reduce((a,b)=>a+b)/cs.length+.5*Math.min(pf,pr,en,sf));
+ const raw=.25*fit+.15*brand+.25*finS+.15*comp*100+.2*cons;
+ const total=cl(100*Math.pow(raw/100,1.25),0,100);
+ const cash=Math.max(0,2e6+r.net);
+ return{units:Math.round(U),rev:r.rev,net:r.net,cash,share:U/20000*100,fit,brand,fin:finS,comp:comp*100,cons,total,pf,pr,en,sf,gs,healthy,price,gm:r.gm,m};
+}
+//ENDMODEL
+//UI
+const $=id=>document.getElementById(id),A=$('app');
+const ST=n=>'★'.repeat(n)+'<i>'+'★'.repeat(5-n)+'</i>';
+const E=n=>'EGP '+Math.round(n).toLocaleString('en-US');
+const D={team:'',seg:null,prod:null,price:null,mk:{s:0,u:0,p:0,m:0},sales:null,crisis:null,growth:null};
+let step=0,opened={},rep=false;
+const SD={T:{t:'TREND SEEKERS',sz:30,age:'16–25',pr:[['Fashion',5],['Exclusivity',4],['Comfort',3],['Sustainability',2],['Price sensitivity',2]],px:'EGP 2,800–4,000',d:'They follow fashion creators, athletes and social media trends and like products that feel exclusive.'},
+V:{t:'VALUE SEEKERS',sz:50,age:'16–30',pr:[['Price',5],['Comfort',5],['Durability',4],['Fashion',3],['Sustainability',2]],px:'EGP 1,700–2,700',d:'They compare alternatives carefully and want strong value for money.'},
+C:{t:'CONSCIOUS CONSUMERS',sz:20,age:'18–35',pr:[['Sustainability',5],['Quality',5],['Transparency',4],['Design',3],['Price sensitivity',3]],px:'EGP 2,500–3,500',d:'They care about materials, durability, responsible production and credible brand values.'}};
+const seg=k=>`<div class="card seg" data-k="${k}"><div class="row"><b class="h3">${SD[k].t}</b><span class="pill">${SD[k].sz}% of market</span></div><div class="bar"><span style="width:${SD[k].sz*2}%"></span></div>
+<div class="more ${opened[k]||rep?'on':''}"><p class="muted">Age ${SD[k].age} · ${SD[k].d}</p>${SD[k].pr.map(p=>`<div class="row sm"><span>${p[0]}</span><span class="st">${ST(p[1])}</span></div>`).join('')}<p class="px">Typical acceptable price<br><b>${SD[k].px}</b></p></div>
+${opened[k]||rep?'':'<p class="tap">Tap to open report ▾</p>'}</div>`;
+const PD={core:{c:900,t:'Reliable everyday sneaker designed for affordability and comfort.',a:[['Comfort',5],['Fashion',3],['Sustainability',2],['Customization',1]]},drop:{c:1500,t:'Limited releases, bold designs and customizable details.',a:[['Comfort',3],['Fashion',5],['Exclusivity',5],['Customization',4]]},earth:{c:1350,t:'Recycled materials, durable construction and lower-waste packaging.',a:[['Comfort',4],['Fashion',3],['Sustainability',5],['Durability',5]]}};
+const hdr=r=>`<div class="top"><span>ROUND ${r} OF 7</span><div class="prog"><i style="width:${r/7*100}%"></i></div><span class="cash" id="cash">${E(2e6)}</span></div>`;
+const rbtn=()=>`<button class="ghost" onclick="modal()">📊 Re-open market report</button>`;
+function modal(){const m=document.createElement('div');m.className='modal';m.innerHTML='<div class="sheet"><button class="ghost" onclick="this.closest(\'.modal\').remove()">✕ Close</button>'+['T','V','C'].map(k=>{rep=true;const h=seg(k);rep=false;return h}).join('')+'</div>';document.body.appendChild(m)}
+const go=n=>{step=n;scrollTo(0,0);render()};
+const ok=(cond,lbl,nx)=>`<button class="cta" ${cond?'':'disabled'} onclick="${nx}">${lbl}</button>`;
+const choose=(f,v)=>{D[f]=v;render()};
+const opt=(f,v,body)=>`<div class="card opt ${D[f]===v?'sel':''}" onclick="choose('${f}','${v}')">${body}</div>`;
+const left=()=>8-Object.values(D.mk).reduce((a,b)=>a+b);
+function render(){document.body.className=step==7?'crisis':'';
+ let h='';
+ if(step==0)h=`<div class="hero"><p class="eyebrow">PULSE EGYPT · THE STARTUP CHALLENGE</p><h1>WELCOME TO<br><em>PULSE EGYPT</em></h1><p>You and your team have just received <b>EGP 2,000,000</b> to launch a new Egyptian sneaker company.</p><p class="muted">In the next 20 minutes, you will make the decisions a real management team faces:<br>Who will you sell to? What will you build? How much will you charge? Where will you spend your money? How will you react when competitors fight back?</p><p class="muted">Every decision affects customers, costs, demand, brand and profitability. At the end, the market will decide whether your company becomes a leader — or fails.</p>
+ <input id="tn" maxlength="18" placeholder="Team name" value="${D.team}" oninput="D.team=this.value.trim();$('go').disabled=!D.team"><button class="cta" id="go" ${D.team?'':'disabled'} onclick="go(1)">ENTER THE MARKET</button><button class="link" onclick="go(20)">Instructor leaderboard</button></div>`;
+ if(step==1)h=hdr(1)+`<h2>Egyptian Market Research Report</h2><p class="muted">Open and read all three segment reports before you continue.</p>${['T','V','C'].map(seg).join('')}${ok(['T','V','C'].every(k=>opened[k]),'CONTINUE','go(2)')}`;
+ if(step==2)h=hdr(1)+`<h2>Which segment will PULSE primarily target?</h2>${rbtn()}${['T','V','C'].map(k=>opt('seg',k,`<b class="h3">${SD[k].t}</b><p class="muted">${SD[k].sz}% of the market · ${SD[k].px}</p>`)).join('')}<p class="note">You can still attract customers outside your primary segment, but your strategy will be evaluated according to the market you choose.</p>${ok(D.seg,'LOCK IN TARGET','go(3)')}`;
+ if(step==3)h=hdr(2)+`<h2>Design your product</h2>${rbtn()}${Object.keys(PD).map(k=>opt('prod',k,`<div class="row"><b class="h3">${PROD[k].n}</b><span class="pill">${E(PD[k].c)}/unit</span></div><p class="muted">${PD[k].t}</p>${PD[k].a.map(p=>`<div class="row sm"><span>${p[0]}</span><span class="st">${ST(p[1])}</span></div>`).join('')}`)).join('')}${ok(D.prod,'LAUNCH THIS PRODUCT','go(4)')}`;
+ if(step==4)h=hdr(3)+`<h2>Your finance team needs a decision</h2><div class="card fin"><div><small>Product</small><b>${PROD[D.prod].n}</b></div><div><small>Cost / unit</small><b>${E(PROD[D.prod].c)}</b></div><div><small>Target</small><b>${SEG[D.seg].n}</b></div></div><p class="muted">Consider willingness to pay, production cost, margin and positioning.</p><div class="grid2">${[1899,2499,3199,3899].map(p=>opt('price',p,`<b class="big">${E(p)}</b>`)).join('')}</div>${rbtn()}${ok(D.price,'SET PRICE','go(5)')}`;
+ if(step==5){const ch=[['s','SOCIAL MEDIA & CREATORS','Instagram, TikTok and Egyptian content creators.'],['u','UNIVERSITY & YOUTH ACTIVATIONS','Pop-ups, student ambassadors, events and product trials.'],['p','PURPOSE & SUSTAINABILITY','Materials, sourcing, durability and responsible production.'],['m','MASS AWARENESS','Outdoor advertising and broad digital reach.']];
+ h=hdr(4)+`<h2>Allocate your marketing budget</h2><div class="card fin"><div><small>Budget</small><b>EGP 400,000</b></div><div><small>Left to allocate</small><b class="${left()?'warn':'good'}">${E(left()*5e4)}</b></div></div>${ch.map(c=>`<div class="card"><b class="h3">${c[1]}</b><p class="muted">${c[2]}</p><div class="row"><button class="pm" onclick="mk('${c[0]}',-1)">−</button><div class="bar grow"><span style="width:${D.mk[c[0]]*12.5}%"></span></div><button class="pm" onclick="mk('${c[0]}',1)">+</button></div><p class="amt">${E(D.mk[c[0]]*5e4)}</p></div>`).join('')}${ok(left()==0,'APPROVE BUDGET','go(6)')}`}
+ if(step==6)h=hdr(5)+`<h2>Choose your sales strategy</h2>${[['o','ONLINE-FIRST',150,['Lower operating costs','National reach','No physical product trial','Strong digital data']],['p','POP-UP STRATEGY',300,['Customers can try products','Creates brand experience','Limited locations and reach']],['h','HYBRID',450,['Online store + selected pop-ups','Higher reach and customer experience','Highest operating cost']]].map(s=>opt('sales',s[0],`<div class="row"><b class="h3">${s[1]}</b><span class="pill">Setup ${E(s[2]*1e3)}</span></div><ul>${s[3].map(x=>`<li>${x}</li>`).join('')}</ul>`)).join('')}${ok(D.sales,'LAUNCH SALES MODEL','go(7)')}`;
+ if(step==7)h=hdr(6)+`<div class="alert">⚠️ MARKET UPDATE</div><h2>Three months after launch…</h2><p>A large international competitor introduces a fashionable sneaker into Egypt at <b>EGP 2,699</b>. Without action, PULSE could lose <b>10–20%</b> of potential demand. Reacting will cost money.</p>${[['A','CUT YOUR PRICE BY 15%','Could protect demand. Reduces margin. May damage premium positioning.'],['B','SPEND AN EXTRA EGP 200,000 ON MARKETING','Protects awareness and differentiation. Reduces cash reserves.'],['C','INVEST EGP 250,000 IN PRODUCT IMPROVEMENT','Increase quality/design. Could strengthen long-term differentiation. Expensive; does not immediately reduce price.'],['D','DO NOTHING','Preserve cash and trust your positioning. Risk losing customers if your value proposition is weak.']].map(c=>opt('crisis',c[0],`<b class="h3">${c[0]} — ${c[1]}</b><p class="muted">${c[2]}</p>`)).join('')}${ok(D.crisis,'RESPOND','go(8)')}`;
+ if(step==8)h=hdr(7)+`<h2>Growth decision</h2><p>PULSE has survived its launch. You now have one final strategic decision.</p>${[['range','EXPAND PRODUCT RANGE',300,'Potentially attracts more customers. Creates inventory and operational complexity.'],['cities','EXPAND TO MORE EGYPTIAN CITIES',350,'Potentially increases market reach. Requires distribution and marketing support.'],['brand','STRENGTHEN THE CURRENT BRAND',200,'Loyalty, customer experience and improving the existing product. Lower growth, lower risk.']].map(g=>opt('growth',g[0],`<div class="row"><b class="h3">${g[1]}</b><span class="pill">${E(g[2]*1e3)}</span></div><p class="muted">${g[3]}</p>`)).join('')}${ok(D.growth,'FINISH & SIMULATE','sim()')}`;
+ A.innerHTML=h;if(step==1)document.querySelectorAll('.seg').forEach(e=>e.onclick=()=>{opened[e.dataset.k]=1;render()});
+ if(step==0)A.querySelector('.hero').classList.add('in')}
+function mk(k,d){const v=D.mk[k]+d;if(v<0||v>8||(d>0&&!left()))return;D.mk[k]=v;render()}
+document.addEventListener('click',e=>{const s=e.target.closest('.modal .seg');if(s)s.querySelector('.more').classList.add('on')});
+function sim(){step=9;document.body.className='';const m=['Calculating consumer demand...','Analyzing competitor response...','Calculating revenue...','Calculating operating costs...','Measuring brand performance...'];let i=0;A.innerHTML='<div class="hero in center"><div class="spin"></div><h2>SIMULATING THE MARKET...</h2><p class="muted" id="sm">'+m[0]+'</p></div>';
+ const t=setInterval(()=>{i++;if(i<m.length)$('sm').textContent=m[i];else{clearInterval(t);A.innerHTML='<div class="hero in center"><h1><em>THE MARKET<br>HAS SPOKEN.</em></h1></div>';setTimeout(results,1800)}},800)}
+const chk=s=>{let h=7;for(const c of s)h=(h*31+c.charCodeAt(0))%46656;return h.toString(36).toUpperCase().padStart(3,'0')};
+const CLS=[[95,'🏆','MARKET DOMINATOR','Exceptional strategic alignment and financial performance.'],[85,'🥇','MARKET LEADER','Strong strategy with excellent execution.'],[75,'🚀','GROWTH COMPANY','Strong potential but some strategic weaknesses.'],[65,'📈','SURVIVING STARTUP','The business survived, but several decisions limited performance.'],[50,'⚠️','STRATEGIC TROUBLE','Major inconsistencies weakened the company.'],[0,'💥','BUSINESS FAILURE','The company needs a major strategic reset.']];
+function results(){step=10;const r=calc(D,D.growth),c=CLS.find(x=>r.total>=x[0]),S=SEG[D.seg],P=PROD[D.prod];
+ const good=[],bad=[],tp=Math.round(r.total*10),nm=D.team.replace(/-/g,' '),code=nm+'-'+tp+'-'+chk(nm+tp);
+ r.pf>=.9?good.push(`${P.n} matched what ${S.n} value most.`):r.pf<.6&&bad.push(`${P.n} was a weak match for ${S.n}, so product–market fit suffered.`);
+ r.pr>=.95?good.push(`${E(D.price)} sat inside your target segment's willingness to pay.`):D.price>S.hi?bad.push(`${E(D.price)} was above what ${S.n} accept (${E(S.lo)}–${E(S.hi)}), so demand dropped.`):bad.push(`${E(D.price)} was below what ${S.n} expect, which weakened margin and positioning.`);
+ r.m<.3?bad.push(`Your margin per unit after production and delivery costs was only ${Math.round(r.m*100)}%, limiting profit even with sales.`):r.m>.5&&good.push(`Healthy unit margin (${Math.round(r.m*100)}%) turned sales into profit.`);
+ r.en>=.8?good.push('Your marketing mix spoke to the right customers through the right channels.'):bad.push('Your marketing budget was not concentrated on the channels your target segment responds to.');
+ r.sf>=.9?good.push(`${SALES[D.sales].n} suited how your target customers prefer to buy.`):r.net<5e5&&bad.push(`${SALES[D.sales].n} set-up and running costs weighed on profit relative to the reach it delivered.`);
+ r.comp>=75?good.push('Your response to the competitor fit your existing positioning.'):bad.push('Your response to the competitor did not fit your positioning or your cash position.');
+ r.gs>=.85?good.push('Your growth investment matched the financial health of the company.'):r.gs&&r.gs<.5&&bad.push('Your growth investment was a poor match for the strength of the company at that point.');
+ const low=[['product','product–market fit',r.pf],['price','pricing',r.pr],['marketing','marketing mix',r.en],['sales','sales channel',r.sf],['crisis','competitive response',r.comp/100]].sort((a,b)=>a[2]-b[2])[0];
+ const rec={product:`Revisit which product best serves ${S.n}. Could a different product make your price and marketing work harder?`,price:'Re-examine the price against both customer willingness to pay and your unit cost. Where do they overlap?',marketing:`Ask where ${S.n} actually spend their attention, then shift budget there.`,sales:'Compare the reach each sales model gives you with the cost it adds. Does it fit how your customers buy?',crisis:'Think about which competitor response protects what makes your brand different, without draining your cash.'}[low[0]];
+ const kp=(l,v)=>`<div class="kpi"><small>${l}</small><b data-n="${v}">0</b></div>`,sc=(l,v)=>`<div class="sc"><div class="row sm"><span>${l}</span><b>${Math.round(v)}</b></div><div class="bar"><span style="width:0" data-w="${v}"></span></div></div>`;
+ A.innerHTML=`<div class="hero in"><p class="eyebrow">${D.team.toUpperCase()}</p><div class="emoji">${c[1]}</div><h1><em>${c[2]}</em></h1><p class="muted">${c[3]}</p><div class="final"><small>FINAL BUSINESS SCORE</small><b id="fs">0</b><span>/100</span></div>
+ <h3>BUSINESS PERFORMANCE</h3><div class="grid2">${kp('Revenue (EGP)',r.rev)}${kp('Net profit (EGP)',r.net)}${kp('Cash remaining (EGP)',r.cash)}${kp('Units sold',r.units)}<div class="kpi"><small>Market share</small><b>${r.share.toFixed(1)}%</b></div></div>
+ <h3>STRATEGIC PERFORMANCE</h3>${sc('Customer–Market Fit',r.fit)}${sc('Brand Strength',r.brand)}${sc('Financial Performance',r.fin)}${sc('Competitive Response',r.comp)}${sc('Strategic Consistency',r.cons)}
+ <h3>WHAT YOU DID WELL</h3><ul>${(good.slice(0,3).length?good.slice(0,3):['You survived and completed a full launch — that is a start.']).map(x=>`<li>${x}</li>`).join('')}</ul><h3>WHAT HURT YOUR BUSINESS</h3><ul>${(bad.slice(0,3).length?bad.slice(0,3):['Very little — small improvements in alignment would be the only upside.']).map(x=>`<li>${x}</li>`).join('')}</ul><h3>WHAT WOULD YOU CHANGE?</h3><p>${rec}</p>
+ <div class="card code"><small>SHOW THIS CODE TO YOUR INSTRUCTOR</small><b>${code}</b></div><button class="cta" onclick="go(11)">WHAT DID YOU JUST DO?</button></div>`;
+ const t0=performance.now(),tick=t=>{const p=cl((t-t0)/1500);document.querySelectorAll('[data-n]').forEach(e=>e.textContent=Math.round(+e.dataset.n*p).toLocaleString('en-US'));$('fs').textContent=(r.total*p).toFixed(1);if(p<1)requestAnimationFrame(tick)};requestAnimationFrame(tick);
+ setTimeout(()=>document.querySelectorAll('[data-w]').forEach(e=>e.style.width=e.dataset.w+'%'),50)}
+function learn(){A.innerHTML=`<div class="hero in"><h1>YOU JUST RAN<br><em>A BUSINESS.</em></h1><p class="muted">You made decisions involving:</p><div class="chips">${['Market Research','Segmentation','Targeting','Product Strategy','Pricing','Marketing','Budget Allocation','Distribution','Competition','Growth','Profitability'].map(x=>`<span>${x}</span>`).join('')}</div><p class="quote">Business isn't about finding one correct answer.<br>It's about making decisions that work together.</p><button class="cta" onclick="restart()">RESTART SIMULATION</button></div>`}
+function restart(){Object.assign(D,{team:'',seg:null,prod:null,price:null,mk:{s:0,u:0,p:0,m:0},sales:null,crisis:null,growth:null});opened={};go(0)}
+function board(){A.innerHTML=`<div class="hero in"><h2>Instructor leaderboard</h2><p class="muted">Paste each team's code, one per line.</p><textarea id="ta" rows="7" placeholder="TEAM NAME-873-K3F"></textarea><button class="cta" onclick="rank()">SHOW RANKING</button><div id="lb"></div><button class="link" onclick="go(0)">← Back</button></div>`}
+function rank(){const rows=[],bad=[];$('ta').value.split('\n').map(s=>s.trim()).filter(Boolean).forEach(l=>{const m=l.match(/^(.*)-(\d{1,4})-([0-9A-Za-z]{3})$/);m&&chk(m[1]+m[2])==m[3].toUpperCase()?rows.push([m[1],+m[2]/10]):bad.push(l)});rows.sort((a,b)=>b[1]-a[1]);
+ $('lb').innerHTML=(rows[0]?`<div class="card win">🏆 WINNER<b class="h3">${rows[0][0]}</b><span>${rows[0][1].toFixed(1)}</span></div>`:'')+rows.map((r,i)=>`<div class="card row"><span>${i+1}. ${r[0]}</span><b>${r[1].toFixed(1)}</b></div>`).join('')+bad.map(l=>`<p class="warn">Invalid code: ${l}</p>`).join('')}
+const _r=render;render=function(){if(step==11)return learn();if(step==20)return board();_r()};
+render();
+</script></body></html>
